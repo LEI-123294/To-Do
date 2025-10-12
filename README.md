@@ -78,6 +78,28 @@ If you use commercial components, pass the license key as a build secret:
 docker build --secret id=proKey,src=$HOME/.vaadin/proKey .
 ```
 
+## GitHub Actions CI Pipeline
+
+O projeto possui um workflow do **GitHub Actions** definido em `.github/workflows/build.yml` que:  
+
+- É executado em **push na branch principal**;  
+- Configura **Java 21**;  
+- Executa `mvn clean package` para gerar o `.jar`;  
+- Publica o `.jar` como **artefacto do workflow**.  
+
+Trecho do `build.yml`:
+
+```yaml
+- name: Build with Maven
+  run: mvn clean package
+
+- name: Upload artifact
+  uses: actions/upload-artifact@v3
+  with:
+    name: my-project-jar
+    path: target/*.jar
+
+
 ## Getting Started
 
 The [Getting Started](https://vaadin.com/docs/latest/getting-started) guide will quickly familiarize you with your new
