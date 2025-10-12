@@ -78,7 +78,7 @@ If you use commercial components, pass the license key as a build secret:
 docker build --secret id=proKey,src=$HOME/.vaadin/proKey .
 ```
 
-## GitHub Actions CI Pipeline
+## GitHub Actions CI/CD Pipeline
 
 O projeto possui um workflow do **GitHub Actions** definido em `.github/workflows/build.yml` que:  
 
