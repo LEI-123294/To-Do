@@ -82,7 +82,7 @@ docker build --secret id=proKey,src=$HOME/.vaadin/proKey .
 
 O projeto possui um workflow do **GitHub Actions** definido em `.github/workflows/build.yml` que:  
 
-- É executado em **push na branch principal**;  
+- É executado em **push para a branch principal**;  
 - Configura **Java 21**;  
 - Executa `mvn clean package` para gerar o `.jar`;  
 - Publica o `.jar` como **artefacto do workflow**.  
