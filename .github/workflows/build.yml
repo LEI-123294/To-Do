@@ -23,7 +23,7 @@ jobs:
         run: mvn clean package
 
       - name: Upload do artefacto
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: app-jar
           path: target/*.jar
