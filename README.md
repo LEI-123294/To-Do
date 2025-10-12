@@ -90,14 +90,15 @@ O projeto possui um workflow do **GitHub Actions** definido em `.github/workflow
 Excerto do ficheiro `build.yml`:
 
 ```yaml
-- name: Build with Maven
+- name: Construir com Maven
   run: mvn clean package
 
-- name: Upload artifact
-  uses: actions/upload-artifact@v3
+- name: Upload do artefacto
+  uses: actions/upload-artifact@v4
   with:
-    name: my-project-jar
+    name: app-jar
     path: target/*.jar
+```
 
 
 ## Getting Started
