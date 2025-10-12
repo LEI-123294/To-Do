@@ -87,7 +87,7 @@ O projeto possui um workflow do **GitHub Actions** definido em `.github/workflow
 - Executa `mvn clean package` para gerar o `.jar`;  
 - Publica o `.jar` como **artefacto do workflow**.  
 
-Trecho do `build.yml`:
+Excerto do ficheiro `build.yml`:
 
 ```yaml
 - name: Build with Maven
